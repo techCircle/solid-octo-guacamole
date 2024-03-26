@@ -12,8 +12,7 @@ import io.cucumber.java.en.When;
 public class loginStepDef extends commonMethods {
 
 	@Given("the user has navigated to the login page")
-	public void the_user_has_navigated_to_the_login_page() {
-			
+	public void the_user_has_navigated_to_the_login_page() {	
 			sDp.clickLoginLogoutOrRegister("login");
 			lp.assertLoginFeatures();
 	}
@@ -22,7 +21,6 @@ public class loginStepDef extends commonMethods {
 	public void the_user_enters_the_correct_username_and_password() {
 		commonMethods.sendKey(lp.inputEmailBox, BaseClass.getProperty("userName"));
 		commonMethods.sendKey(lp.inputPasswordBox, BaseClass.getProperty("passWord"));
-
 	}
 
 	@When("the user clicks on the login button")
